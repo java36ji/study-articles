@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)https://kaiiiz.github.io/hexo-theme-book-demo/ -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+        <link rel="icon" href="../../static/favicon.png">
+        <title>03 安装：ElasticSearch和Kibana安装.md</title>
+        <!-- Spectre.css framework -->
+        <link rel="stylesheet" href="../../static/index.css">
+        <!-- theme css & js -->
+        <meta name="generator" content="Hexo 4.2.0">
+    </head>
+
+<body>
+
+<div class="book-container">
+    <div class="book-sidebar">
+        <div class="book-brand">
+            <a href="../../index.html">
+                <img src="../../static/favicon.png">
+                <span>技术文章摘抄</span>
+            </a>
+        </div>
+        <div class="book-menu uncollapsible">
+            <ul class="uncollapsible">
+                <li><a href="../../index.html" class="current-tab">首页</a></li>
+            </ul>
+
+            <ul class="uncollapsible">
+                <li><a href="../index.html">上一级</a></li>
+            </ul>
+
+            <ul class="uncollapsible">
+                <li>
+
+                    
+                    <a href="01%20%E8%AE%A4%E7%9F%A5%EF%BC%9AElasticSearch%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5.md.html">01 认知：ElasticSearch基础概念.md</a>
+
+                </li>
+                <li>
+
+                    
+                    <a href="02%20%E8%AE%A4%E7%9F%A5%EF%BC%9AElastic%20Stack%E7%94%9F%E6%80%81%E5%92%8C%E5%9C%BA%E6%99%AF%E6%96%B9%E6%A1%88.md.html">02 认知：Elastic Stack生态和场景方案.md</a>
+
+                </li>
+                <li>
+
+                    <a class="current-tab" href="03%20%E5%AE%89%E8%A3%85%EF%BC%9AElasticSearch%E5%92%8CKibana%E5%AE%89%E8%A3%85.md.html">03 安装：ElasticSearch和Kibana安装.md</a>
+                    
+
+                </li>
+                <li>
+
+                    
+                    <a href="04%20%E5%85%A5%E9%97%A8%EF%BC%9A%E6%9F%A5%E8%AF%A2%E5%92%8C%E8%81%9A%E5%90%88%E7%9A%84%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8.md.html">04 入门：查询和聚合的基础使用.md</a>
+
+                </li>
+                <li>
+
+                    
+                    <a href="05%20%E7%B4%A2%E5%BC%95%EF%BC%9A%E7%B4%A2%E5%BC%95%E7%AE%A1%E7%90%86%E8%AF%A6%E8%A7%A3.md.html">05 索引：索引管理详解.md</a>
+
+                </li>
+                <li>
+
+                    
+                    <a href="06%20%E7%B4%A2%E5%BC%95%EF%BC%9A%E7%B4%A2%E5%BC%95%E6%A8%A1%E6%9D%BF(Index%20Template)%E8%AF%A6%E8%A7%A3.md.html">06 索引：索引模板(Index Template)详解.md</a>
+
+                </li>
+                <li>
+
+                    
+                    <a href="07%20%E6%9F%A5%E8%AF%A2%EF%BC%9ADSL%E6%9F%A5%E8%AF%A2%E4%B9%8B%E5%A4%8D%E5%90%88%E6%9F%A5%E8%AF%A2%E8%AF%A6%E8%A7%A3.md.html">07 查询：DSL查询之复合查询详解.md</a>
+
+                </li>
+                <li>
+
+                    
+                    <a href="08%20%E6%9F%A5%E8%AF%A2%EF%BC%9ADSL%E6%9F%A5%E8%AF%A2%E4%B9%8B%E5%85%A8%E6%96%87%E6%90%9C%E7%B4%A2%E8%AF%A6%E8%A7%A3.md.html">08 查询：DSL查询之全文搜索详解.md</a>
+
+                </li>
+                <li>
+
+                    
+                    <a href="09%20%E6%9F%A5%E8%AF%A2%EF%BC%9ADSL%E6%9F%A5%E8%AF%A2%E4%B9%8BTerm%E8%AF%A6%E8%A7%A3.md.html">09 查询：DSL查询之Term详解.md</a>
+
+                </li>
+                <li>
+
+                    
+                    <a href="10%20%E8%81%9A%E5%90%88%EF%BC%9A%E8%81%9A%E5%90%88%E6%9F%A5%E8%AF%A2%E4%B9%8BBucket%E8%81%9A%E5%90%88%E8%AF%A6%E8%A7%A3.md.html">10 聚合：聚合查询之Bucket聚合详解.md</a>
+
+                </li>
+                <li>
+
+                    
+                    <a href="11%20%E8%81%9A%E5%90%88%EF%BC%9A%E8%81%9A%E5%90%88%E6%9F%A5%E8%AF%A2%E4%B9%8BMetric%E8%81%9A%E5%90%88%E8%AF%A6%E8%A7%A3.md.html">11 聚合：聚合查询之Metric聚合详解.md</a>
+
+                </li>
+                <li>
+
+                    
+                    <a href="12%20%E8%81%9A%E5%90%88%EF%BC%9A%E8%81%9A%E5%90%88%E6%9F%A5%E8%AF%A2%E4%B9%8BPipline%E8%81%9A%E5%90%88%E8%AF%A6%E8%A7%A3.md.html">12 聚合：聚合查询之Pipline聚合详解.md</a>
+
+                </li>
+                <li>
+
+                    
+                    <a href="13%20%E5%8E%9F%E7%90%86%EF%BC%9A%E4%BB%8E%E5%9B%BE%E8%A7%A3%E6%9E%84%E7%AD%91%E5%AF%B9ES%E5%8E%9F%E7%90%86%E7%9A%84%E5%88%9D%E6%AD%A5%E8%AE%A4%E7%9F%A5.md.html">13 原理：从图解构筑对ES原理的初步认知.md</a>
+
+                </li>
+                <li>
+
+                    
+                    <a href="14%20%E5%8E%9F%E7%90%86%EF%BC%9AES%E5%8E%9F%E7%90%86%E7%9F%A5%E8%AF%86%E7%82%B9%E8%A1%A5%E5%85%85%E5%92%8C%E6%95%B4%E4%BD%93%E7%BB%93%E6%9E%84.md.html">14 原理：ES原理知识点补充和整体结构.md</a>
+
+                </li>
+                <li>
+
+                    
+                    <a href="15%20%E5%8E%9F%E7%90%86%EF%BC%9AES%E5%8E%9F%E7%90%86%E4%B9%8B%E7%B4%A2%E5%BC%95%E6%96%87%E6%A1%A3%E6%B5%81%E7%A8%8B%E8%AF%A6%E8%A7%A3.md.html">15 原理：ES原理之索引文档流程详解.md</a>
+
+                </li>
+                <li>
+
+                    
+                    <a href="16%20%E5%8E%9F%E7%90%86%EF%BC%9AES%E5%8E%9F%E7%90%86%E4%B9%8B%E8%AF%BB%E5%8F%96%E6%96%87%E6%A1%A3%E6%B5%81%E7%A8%8B%E8%AF%A6%E8%A7%A3.md.html">16 原理：ES原理之读取文档流程详解.md</a>
+
+                </li>
+                <li>
+
+                    
+                    <a href="17%20%E4%BC%98%E5%8C%96%EF%BC%9AElasticSearch%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E8%AF%A6%E8%A7%A3.md.html">17 优化：ElasticSearch性能优化详解.md</a>
+
+                </li>
+                <li>
+
+                    
+                    <a href="18%20%E5%A4%A7%E5%8E%82%E5%AE%9E%E8%B7%B5%EF%BC%9A%E8%85%BE%E8%AE%AF%E4%B8%87%E4%BA%BF%E7%BA%A7%20Elasticsearch%20%E6%8A%80%E6%9C%AF%E5%AE%9E%E8%B7%B5.md.html">18 大厂实践：腾讯万亿级 Elasticsearch 技术实践.md</a>
+
+                </li>
+                <li>
+
+                    
+                    <a href="19%20%E8%B5%84%E6%96%99%EF%BC%9AAwesome%20Elasticsearch.md.html">19 资料：Awesome Elasticsearch.md</a>
+
+                </li>
+                <li>
+
+                    
+                    <a href="20%20WrapperQuery.md.html">20 WrapperQuery.md</a>
+
+                </li>
+                <li>
+
+                    
+                    <a href="21%20%E5%A4%87%E4%BB%BD%E5%92%8C%E8%BF%81%E7%A7%BB.md.html">21 备份和迁移.md</a>
+
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="sidebar-toggle" onclick="sidebar_toggle()" onmouseover="add_inner()" onmouseleave="remove_inner()">
+        <div class="sidebar-toggle-inner"></div>
+    </div>
+
+    <script>
+        function add_inner() {
+            let inner = document.querySelector('.sidebar-toggle-inner')
+            inner.classList.add('show')
+        }
+
+        function remove_inner() {
+            let inner = document.querySelector('.sidebar-toggle-inner')
+            inner.classList.remove('show')
+        }
+
+        function sidebar_toggle() {
+            let sidebar_toggle = document.querySelector('.sidebar-toggle')
+            let sidebar = document.querySelector('.book-sidebar')
+            let content = document.querySelector('.off-canvas-content')
+            if (sidebar_toggle.classList.contains('extend')) { // show
+                sidebar_toggle.classList.remove('extend')
+                sidebar.classList.remove('hide')
+                content.classList.remove('extend')
+            } else { // hide
+                sidebar_toggle.classList.add('extend')
+                sidebar.classList.add('hide')
+                content.classList.add('extend')
+            }
+        }
+
+
+function open_sidebar() {
+    let sidebar = document.querySelector('.book-sidebar')
+    let overlay = document.querySelector('.off-canvas-overlay')
+    sidebar.classList.add('show')
+    overlay.classList.add('show')
+}
+function hide_canvas() {
+    let sidebar = document.querySelector('.book-sidebar')
+    let overlay = document.querySelector('.off-canvas-overlay')
+    sidebar.classList.remove('show')
+    overlay.classList.remove('show')
+}
+
+    </script>
+
+    <div class="off-canvas-content">
+        <div class="columns">
+            <div class="column col-12 col-lg-12">
+                <div class="book-navbar">
+                    <!-- For Responsive Layout -->
+                    <header class="navbar">
+                        <section class="navbar-section">
+                            <a onclick="open_sidebar()">
+                                <i class="icon icon-menu"></i>
+                            </a>
+                        </section>
+                    </header>
+                </div>
+                <div class="book-content" style="max-width: 960px; margin: 0 auto;
+    overflow-x: auto;
+    overflow-y: hidden;">
+                    <div class="book-post">
+                        <p id="tip" align="center"></p>
+                        <div><h1>03 安装：ElasticSearch和Kibana安装</h1>
+<h2>安装ElasticSearch</h2>
+<blockquote>
+<p>ElasticSearch 是基于Java平台的，所以先要安装Java</p>
+</blockquote>
+<ul>
+<li><strong>平台确认</strong></li>
+</ul>
+<p>这里我准备了一台Centos7虚拟机, 为方便选择后续安装的版本，所以需要看下系统版本信息。</p>
+<pre><code class="language-bash">[<a href="../../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="61130e0e1521372c4c514c50554c02040f150e12">[email&#160;protected]</a> ~]# uname -a
+Linux VM-0-14-centos 3.10.0-862.el7.x86_64 #1 SMP Fri Apr 20 16:44:24 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux
+    
+</code></pre>
+<ul>
+<li><strong>安装Java</strong></li>
+</ul>
+<p>安装 Elasticsearch 之前，你需要先安装一个较新的版本的 Java，最好的选择是，你可以从 <a href="https://www.java.com">www.java.com  </a> 获得官方提供的最新版本的 Java。安装以后，确认是否安装成功：</p>
+<pre><code class="language-bash">[<a href="../../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="b8cad7d7ccf8eef5958895898c95dbddd6ccd7cb">[email&#160;protected]</a> ~]# java --version
+openjdk 14.0.2 2020-07-14
+OpenJDK Runtime Environment 20.3 (slowdebug build 14.0.2+12)
+OpenJDK 64-Bit Server VM 20.3 (slowdebug build 14.0.2+12, mixed mode, sharing)
+    
+</code></pre>
+<ul>
+<li><strong>下载ElasticSearch</strong></li>
+</ul>
+<p>从<a href="https://www.elastic.co/cn/downloads/elasticsearch">这里  </a>下载ElasticSearch</p>
+<p>比如可以通过curl下载</p>
+<pre><code class="language-bash">[<a href="../../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="05776a6a7145534828352834312866606b716a76">[email&#160;protected]</a> opt]# curl -O https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.12.0-linux-x86_64.tar.gz
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+    
+</code></pre>
+<ul>
+<li><strong>解压</strong></li>
+</ul>
+<pre><code class="language-bash">[<a href="../../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="e99b86869da9bfa4c4d9c4d8ddc48a8c879d869a">[email&#160;protected]</a> opt]# tar zxvf /opt/elasticsearch-7.12.0-linux-x86_64.tar.gz 
+...
+[<a href="../../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="22504d4d5662746f0f120f13160f41474c564d51">[email&#160;protected]</a> opt]# ll | grep elasticsearch
+drwxr-xr-x  9 root root      4096 Mar 18 14:21 elasticsearch-7.12.0
+-rw-r--r--  1 root root 327497331 Apr  5 21:05 elasticsearch-7.12.0-linux-x86_64.tar.gz
+    
+</code></pre>
+<ul>
+<li><strong>增加elasticSearch用户</strong></li>
+</ul>
+<p>必须创建一个非root用户来运行ElasticSearch(ElasticSearch5及以上版本，基于安全考虑，强制规定不能以root身份运行。)</p>
+<p>如果你使用root用户来启动ElasticSearch，则会有如下错误信息：</p>
+<pre><code class="language-bash">[<a href="../../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="cebca1a1ba8e9883e3fee3fffae3adaba0baa1bd">[email&#160;protected]</a> opt]# cd elasticsearch-7.12.0/
+[<a href="../../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="691b06061d293f24445944585d440a0c071d061a">[email&#160;protected]</a> elasticsearch-7.12.0]# ./bin/elasticsearch
+[2021-04-05T21:36:46,510][ERROR][o.e.b.ElasticsearchUncaughtExceptionHandler] [VM-0-14-centos] uncaught exception in thread [main]
+org.elasticsearch.bootstrap.StartupException: java.lang.RuntimeException: can not run elasticsearch as root
+        at org.elasticsearch.bootstrap.Elasticsearch.init(Elasticsearch.java:163) ~[elasticsearch-7.12.0.jar:7.12.0]
+        at org.elasticsearch.bootstrap.Elasticsearch.execute(Elasticsearch.java:150) ~[elasticsearch-7.12.0.jar:7.12.0]
+        at org.elasticsearch.cli.EnvironmentAwareCommand.execute(EnvironmentAwareCommand.java:75) ~[elasticsearch-7.12.0.jar:7.12.0]
+        at org.elasticsearch.cli.Command.mainWithoutErrorHandling(Command.java:116) ~[elasticsearch-cli-7.12.0.jar:7.12.0]
+        at org.elasticsearch.cli.Command.main(Command.java:79) ~[elasticsearch-cli-7.12.0.jar:7.12.0]
+        at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:115) ~[elasticsearch-7.12.0.jar:7.12.0]
+        at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:81) ~[elasticsearch-7.12.0.jar:7.12.0]
+Caused by: java.lang.RuntimeException: can not run elasticsearch as root
+        at org.elasticsearch.bootstrap.Bootstrap.initializeNatives(Bootstrap.java:101) ~[elasticsearch-7.12.0.jar:7.12.0]
+        at org.elasticsearch.bootstrap.Bootstrap.setup(Bootstrap.java:168) ~[elasticsearch-7.12.0.jar:7.12.0]
+        at org.elasticsearch.bootstrap.Bootstrap.init(Bootstrap.java:397) ~[elasticsearch-7.12.0.jar:7.12.0]
+        at org.elasticsearch.bootstrap.Elasticsearch.init(Elasticsearch.java:159) ~[elasticsearch-7.12.0.jar:7.12.0]
+        ... 6 more
+uncaught exception in thread [main]
+java.lang.RuntimeException: can not run elasticsearch as root
+        at org.elasticsearch.bootstrap.Bootstrap.initializeNatives(Bootstrap.java:101)
+        at org.elasticsearch.bootstrap.Bootstrap.setup(Bootstrap.java:168)
+        at org.elasticsearch.bootstrap.Bootstrap.init(Bootstrap.java:397)
+        at org.elasticsearch.bootstrap.Elasticsearch.init(Elasticsearch.java:159)
+        at org.elasticsearch.bootstrap.Elasticsearch.execute(Elasticsearch.java:150)
+        at org.elasticsearch.cli.EnvironmentAwareCommand.execute(EnvironmentAwareCommand.java:75)
+        at org.elasticsearch.cli.Command.mainWithoutErrorHandling(Command.java:116)
+        at org.elasticsearch.cli.Command.main(Command.java:79)
+        at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:115)
+        at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:81)
+For complete error details, refer to the log at /opt/elasticsearch-7.12.0/logs/elasticsearch.log
+2021-04-05 13:36:46,979269 UTC [8846] INFO  <a href="../../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="571a363e3979343417666761">[email&#160;protected]</a> Parent process died - ML controller exiting
+    
+</code></pre>
+<p>所以我们增加一个独立的elasticsearch用户来运行</p>
+<pre><code class="language-bash"># 增加elasticsearch用户
+[<a href="../../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="94e6fbfbe0d4c2d9b9a4b9a5a0b9f7f1fae0fbe7">[email&#160;protected]</a> elasticsearch-7.12.0]# useradd elasticsearch
+[<a href="../../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="780a17170c382e35554855494c551b1d160c170b">[email&#160;protected]</a> elasticsearch-7.12.0]# passwd elasticsearch
+Changing password for user elasticsearch.
+New password: 
+BAD PASSWORD: The password contains the user name in some form
+Retype new password: 
+passwd: all authentication tokens updated successfully.
+
+# 修改目录权限至新增的elasticsearch用户
+[<a href="../../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="295b46465d697f64041904181d044a4c475d465a">[email&#160;protected]</a> elasticsearch-7.12.0]# chown -R elasticsearch /opt/elasticsearch-7.12.0
+# 增加data和log存放区，并赋予elasticsearch用户权限
+[<a href="../../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="a9dbc6c6dde9ffe4849984989d84caccc7ddc6da">[email&#160;protected]</a> elasticsearch-7.12.0]# mkdir -p /data/es
+[<a href="../../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="abd9c4c4dfebfde6869b869a9f86c8cec5dfc4d8">[email&#160;protected]</a> elasticsearch-7.12.0]# chown -R elasticsearch /data/es
+[<a href="../../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="691b06061d293f24445944585d440a0c071d061a">[email&#160;protected]</a> elasticsearch-7.12.0]# mkdir -p /var/log/es
+[<a href="../../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="fd8f929289bdabb0d0cdd0ccc9d09e989389928e">[email&#160;protected]</a> elasticsearch-7.12.0]# chown -R elasticsearch /var/log/es
+
+    
+</code></pre>
+<p>然后修改上述的data和log路径，<code>vi /opt/elasticsearch-7.12.0/config/elasticsearch.yml</code></p>
+<pre><code class="language-bash"># ----------------------------------- Paths ------------------------------------
+#
+# Path to directory where to store the data (separate multiple locations by comma):
+#
+path.data: /data/es
+#
+# Path to log files:
+#
+path.logs: /var/log/es
+    
+</code></pre>
+<ul>
+<li><strong>修改Linux系统的限制配置</strong></li>
+</ul>
+<ol>
+<li>修改系统中允许应用最多创建多少文件等的限制权限。Linux默认来说，一般限制应用最多创建的文件是65535个。但是ES至少需要65536的文件创建权限。</li>
+<li>修改系统中允许用户启动的进程开启多少个线程。默认的Linux限制root用户开启的进程可以开启任意数量的线程，其他用户开启的进程可以开启1024个线程。必须修改限制数为4096+。因为ES至少需要4096的线程池预备。ES在5.x版本之后，强制要求在linux中不能使用root用户启动ES进程。所以必须使用其他用户启动ES进程才可以。</li>
+<li>Linux低版本内核为线程分配的内存是128K。4.x版本的内核分配的内存更大。如果虚拟机的内存是1G，最多只能开启3000+个线程数。至少为虚拟机分配1.5G以上的内存。</li>
+</ol>
+<p>修改如下配置</p>
+<pre><code class="language-bash">[<a href="../../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="ef9d80809bafb9a2c2dfc2dedbc28c8a819b809c">[email&#160;protected]</a> elasticsearch-7.12.0]# vi /etc/security/limits.conf
+
+elasticsearch soft nofile 65536
+elasticsearch hard nofile 65536
+elasticsearch soft nproc 4096
+elasticsearch hard nproc 4096
+    
+</code></pre>
+<ul>
+<li><strong>启动ElasticSearch</strong></li>
+</ul>
+<pre><code class="language-bash">[<a href="../../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="1f6d70706b5f4952322f322e2b327c7a716b706c">[email&#160;protected]</a> elasticsearch-7.12.0]# su elasticsearch
+[<a href="../../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="5a3f363b292e3339293f3b2839321a0c17776a776b6e77393f342e3529">[email&#160;protected]</a> elasticsearch-7.12.0]$ ./bin/elasticsearch -d
+[2021-04-05T22:03:38,332][INFO ][o.e.n.Node               ] [VM-0-14-centos] version[7.12.0], pid[13197], build[default/tar/78722783c38caa25a70982b5b042074cde5d3b3a/2021-03-18T06:17:15.410153305Z], OS[Linux/3.10.0-862.el7.x86_64/amd64], JVM[AdoptOpenJDK/OpenJDK 64-Bit Server VM/15.0.1/15.0.1+9]
+[2021-04-05T22:03:38,348][INFO ][o.e.n.Node               ] [VM-0-14-centos] JVM home [/opt/elasticsearch-7.12.0/jdk], using bundled JDK [true]
+[2021-04-05T22:03:38,348][INFO ][o.e.n.Node               ] [VM-0-14-centos] JVM arguments [-Xshare:auto, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -XX:+ShowCodeDetailsInExceptionMessages, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dio.netty.allocator.numDirectArenas=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.locale.providers=SPI,COMPAT, --add-opens=java.base/java.io=ALL-UNNAMED, -XX:+UseG1GC, -Djava.io.tmpdir=/tmp/elasticsearch-17264135248464897093, -XX:+HeapDumpOnOutOfMemoryError, -XX:HeapDumpPath=data, -XX:ErrorFile=logs/hs_err_pid%p.log, -Xlog:gc*,gc+age=trace,safepoint:file=logs/gc.log:utctime,pid,tags:filecount=32,filesize=64m, -Xms1894m, -Xmx1894m, -XX:MaxDirectMemorySize=993001472, -XX:G1HeapRegionSize=4m, -XX:InitiatingHeapOccupancyPercent=30, -XX:G1ReservePercent=15, -Des.path.home=/opt/elasticsearch-7.12.0, -Des.path.conf=/opt/elasticsearch-7.12.0/config, -Des.distribution.flavor=default, -Des.distribution.type=tar, -Des.bundled_jdk=true]
+    
+</code></pre>
+<ul>
+<li><strong>查看安装是否成功</strong></li>
+</ul>
+<pre><code class="language-bash">[<a href="../../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="fb8994948fbbadb6d6cbd6cacfd6989e958f9488">[email&#160;protected]</a> ~]# netstat -ntlp | grep 9200
+tcp6       0      0 127.0.0.1:9200          :::*                    LISTEN      13549/java          
+tcp6       0      0 ::1:9200                :::*                    LISTEN      13549/java          
+[<a href="../../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="1d6f7272695d4b50302d302c29307e787369726e">[email&#160;protected]</a> ~]# curl 127.0.0.1:9200
+{
+  &quot;name&quot; : &quot;VM-0-14-centos&quot;,
+  &quot;cluster_name&quot; : &quot;elasticsearch&quot;,
+  &quot;cluster_uuid&quot; : &quot;ihttW8b2TfWSkwf_YgPH2Q&quot;,
+  &quot;version&quot; : {
+    &quot;number&quot; : &quot;7.12.0&quot;,
+    &quot;build_flavor&quot; : &quot;default&quot;,
+    &quot;build_type&quot; : &quot;tar&quot;,
+    &quot;build_hash&quot; : &quot;78722783c38caa25a70982b5b042074cde5d3b3a&quot;,
+    &quot;build_date&quot; : &quot;2021-03-18T06:17:15.410153305Z&quot;,
+    &quot;build_snapshot&quot; : false,
+    &quot;lucene_version&quot; : &quot;8.8.0&quot;,
+    &quot;minimum_wire_compatibility_version&quot; : &quot;6.8.0&quot;,
+    &quot;minimum_index_compatibility_version&quot; : &quot;6.0.0-beta1&quot;
+  },
+  &quot;tagline&quot; : &quot;You Know, for Search&quot;
+}
+    
+</code></pre>
+<h2>安装Kibana</h2>
+<blockquote>
+<p>Kibana是界面化的查询数据的工具，下载时尽量下载与ElasicSearch一致的版本。</p>
+</blockquote>
+<ul>
+<li><strong>下载Kibana</strong></li>
+</ul>
+<p>从<a href="https://www.elastic.co/cn/downloads/kibana">这里  </a>下载Kibana</p>
+<ul>
+<li><strong>解压</strong></li>
+</ul>
+<pre><code class="language-bash">[<a href="../../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="a4d6cbcbd0e4f2e9899489959089c7c1cad0cbd7">[email&#160;protected]</a> opt]# tar -vxzf kibana-7.12.0-linux-x86_64.tar.gz
+    
+</code></pre>
+<ul>
+<li><strong>使用elasticsearch用户权限</strong></li>
+</ul>
+<pre><code class="language-bash">[<a href="../../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="b1c3dedec5f1e7fc9c819c80859cd2d4dfc5dec2">[email&#160;protected]</a> opt]# chown -R elasticsearch /opt/kibana-7.12.0-linux-x86_64
+#配置Kibana的远程访问
+[<a href="../../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="f684999982b6a0bbdbc6dbc7c2db959398829985">[email&#160;protected]</a> opt]# vi /opt/kibana-7.12.0-linux-x86_64/config/kibana.yml
+server.host: 0.0.0.0
+    
+</code></pre>
+<ul>
+<li><strong>启动</strong></li>
+</ul>
+<p>需要切换至elasticsearch用户</p>
+<pre><code class="language-bash">[<a href="../../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="6d1f0202192d3b20405d405c59400e080319021e">[email&#160;protected]</a> opt]# su elasticsearch
+[<a href="../../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="187d74796b6c717b6b7d796a7b70584e55352835292c357b7d766c776b">[email&#160;protected]</a> opt]$ cd /opt/kibana-7.12.0-linux-x86_64/
+[<a href="../../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="02676e6371766b6171676370616a42544f2f322f33362f61676c766d71">[email&#160;protected]</a> kibana-7.12.0-linux-x86_64]$ ./bin/kibana
+  log   [22:30:22.185] [info][plugins-service] Plugin &quot;osquery&quot; is disabled.
+  log   [22:30:22.283] [warning][config][deprecation] Config key [monitoring.cluster_alerts.email_notifications.email_address] will be required for email notifications to work in 8.0.&quot;
+  log   [22:30:22.482] [info][plugins-system] Setting up [100] plugins: [taskManager,licensing,globalSearch,globalSearchProviders,banners,code,usageCollection,xpackLegacy,telemetryCollectionManager,telemetry,telemetryCollectionXpack,kibanaUsageCollection,securityOss,share,newsfeed,mapsLegacy,kibanaLegacy,translations,legacyExport,embeddable,uiActionsEnhanced,expressions,charts,esUiShared,bfetch,data,home,observability,console,consoleExtensions,apmOss,searchprofiler,painlessLab,grokdebugger,management,indexPatternManagement,advancedSettings,fileUpload,savedObjects,visualizations,visTypeVislib,visTypeVega,visTypeTimelion,features,licenseManagement,watcher,canvas,visTypeTagcloud,visTypeTable,visTypeMetric,visTypeMarkdown,tileMap,regionMap,visTypeXy,graph,timelion,dashboard,dashboardEnhanced,visualize,visTypeTimeseries,inputControlVis,discover,discoverEnhanced,savedObjectsManagement,spaces,security,savedObjectsTagging,maps,lens,reporting,lists,encryptedSavedObjects,dashboardMode,dataEnhanced,cloud,upgradeAssistant,snapshotRestore,fleet,indexManagement,rollup,remoteClusters,crossClusterReplication,indexLifecycleManagement,enterpriseSearch,beatsManagement,transform,ingestPipelines,eventLog,actions,alerts,triggersActionsUi,stackAlerts,ml,securitySolution,case,infra,monitoring,logstash,apm,uptime]
+  log   [22:30:22.483] [info][plugins][taskManager] TaskManager is identified by the Kibana UUID: xxxxxx
+  ...
+    
+</code></pre>
+<p>如果是后台启动：</p>
+<pre><code class="language-bash">[<a href="../../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="80e5ece1f3f4e9e3f3e5e1f2e3e8c0d6cdadb0adb1b4ade3e5eef4eff3">[email&#160;protected]</a> kibana-7.12.0-linux-x86_64]$ nohup ./bin/kibana &amp;
+    
+</code></pre>
+<ul>
+<li><strong>界面访问</strong></li>
+</ul>
+<p><img src="assets/es-install-1.png" alt="img" /></p>
+<p>可以导入simple data</p>
+<p><img src="assets/es-install-2.png" alt="img" /></p>
+<p>查看数据</p>
+<p><img src="assets/es-install-3.png" alt="img" /></p>
+<h2>配置密码访问</h2>
+<blockquote>
+<p>使用基本许可证时，默认情况下禁用Elasticsearch安全功能。由于我测试环境是放在公网上的，所以需要设置下密码访问。相关文档可以参考<a href="https://www.elastic.co/guide/en/elasticsearch/reference/7.12/security-minimal-setup.html">这里  </a></p>
+</blockquote>
+<ol>
+<li>停止kibana和elasticsearch服务</li>
+<li>将<code>xpack.security.enabled</code>设置添加到ES_PATH_CONF/elasticsearch.yml文件并将值设置为true</li>
+<li>启动elasticsearch (<code>./bin/elasticsearch -d</code>)</li>
+<li>执行如下密码设置器，<code>./bin/elasticsearch-setup-passwords interactive</code>来设置各个组件的密码</li>
+<li>将elasticsearch.username设置添加到KIB_PATH_CONF/kibana.yml 文件并将值设置给elastic用户： <code>elasticsearch.username: &quot;elastic&quot;</code></li>
+<li>创建kibana keystore, <code>./bin/kibana-keystore create</code></li>
+<li>在kibana keystore 中添加密码 <code>./bin/kibana-keystore add elasticsearch.password</code></li>
+<li>重启kibana 服务即可 <code>nohup ./bin/kibana &amp;</code></li>
+</ol>
+<p>然后就可以使用密码登录了：</p>
+<p><img src="assets/es-install-4.png" alt="img" /></p>
+</div>
+                    </div>
+                    <div>
+                        <div style="float: left">
+                            <a href="02%20%E8%AE%A4%E7%9F%A5%EF%BC%9AElastic%20Stack%E7%94%9F%E6%80%81%E5%92%8C%E5%9C%BA%E6%99%AF%E6%96%B9%E6%A1%88.md.html">上一页</a>
+                        </div>
+                        <div style="float: right">
+                            <a href="04%20%E5%85%A5%E9%97%A8%EF%BC%9A%E6%9F%A5%E8%AF%A2%E5%92%8C%E8%81%9A%E5%90%88%E7%9A%84%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8.md.html">下一页</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a class="off-canvas-overlay" onclick="hide_canvas()"></a>
+</div>
+<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194" integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw==" data-cf-beacon='{"rayId":"7123555cad2d9f77","version":"2021.12.0","r":1,"token":"1f5d475227ce4f0089a7cff1ab17c0f5","si":100}' crossorigin="anonymous"></script>
+</body>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NPSEEVD756"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-NPSEEVD756');
+    var path = window.location.pathname
+    var cookie = getCookie("lastPath");
+    console.log(path)
+    if (path.replace("/", "") === "") {
+        if (cookie.replace("/", "") !== "") {
+            console.log(cookie)
+            document.getElementById("tip").innerHTML = "<a href='" + cookie + "'>跳转到上次进度</a>"
+        }
+    } else {
+        setCookie("lastPath", path)
+    }
+
+    function setCookie(cname, cvalue) {
+        var d = new Date();
+        d.setTime(d.getTime() + (180 * 24 * 60 * 60 * 1000));
+        var expires = "expires=" + d.toGMTString();
+        document.cookie = cname + "=" + cvalue + "; " + expires + ";path = /";
+    }
+
+    function getCookie(cname) {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i].trim();
+            if (c.indexOf(name) === 0) return c.substring(name.length, c.length);
+        }
+        return "";
+    }
+
+</script>
+
+</html>
